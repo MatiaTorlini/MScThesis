@@ -20,8 +20,8 @@ public class OntoManager {
    private QueryEngine engine;
    
    public OntoManager() throws Exception{
-    File f = new File("/home/vboxuser/Desktop/proto-cosimo.rdf");
-    OWLOntologyManager manager = new OWLManager().createOWLOntologyManager();
+    File f = new File("proto-cosimo.rdf");
+    final OWLOntologyManager manager = new OWLManager().createOWLOntologyManager();
     OWLOntology ont = manager.loadOntologyFromOntologyDocument(f);
     StructuralReasonerFactory factory = new StructuralReasonerFactory();
     OWLReasoner reasoner = factory.createReasoner(ont);

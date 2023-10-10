@@ -1,0 +1,591 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18/"
+     xml:base="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-18="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#flowOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#flowOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#hasFlow"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#hasFlow -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#hasFlow"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Battery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Battery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Building -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Building">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#BuildingInternalTemperature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#BuildingInternalTemperature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#BuildingStatusDataFlow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#BuildingStatusDataFlow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#BuildingStatusDataFlow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#StatusDataFlow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Component -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Component">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ConsumptionDataFlow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ConsumptionDataFlow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#DataSignalFlow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ControlSignalFlow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ControlSignalFlow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#SignalFlow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ConvectionFlow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ConvectionFlow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ThermalEnergyFlow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#DataSignalFlow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#DataSignalFlow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#SignalFlow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#EHPController -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#EHPController">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ElectricHeatPump -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ElectricHeatPump">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ElectricHeatPumpConsumptionData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ElectricHeatPumpConsumptionData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ElectricalEnergyConsumptionData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ElectricalEnergyConsumptionData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ElectricalEnergyConsumptionData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ConsumptionDataFlow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ElectricalEnergyFlow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ElectricalEnergyFlow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#EnergyFlow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ElectricalEnergyProductionData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ElectricalEnergyProductionData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ProductionDataFlow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#EnergyFlow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#EnergyFlow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Flow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#EnvironmentalDataFlow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#EnvironmentalDataFlow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#DataSignalFlow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Flow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Flow"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Gaseous -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Gaseous">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Substance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#GreenEnergyProductionData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#GreenEnergyProductionData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ElectricalEnergyProductionData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#HighVoltageElectricalEnergyFlow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#HighVoltageElectricalEnergyFlow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ElectricalEnergyFlow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#HouseHoldBehaviour -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#HouseHoldBehaviour">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#HouseholdConsumptionData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#HouseholdConsumptionData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ElectricalEnergyConsumptionData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Liquid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Liquid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Substance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#LocalTemperature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#LocalTemperature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#WeatherDataFlow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#LocalWeather -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#LocalWeather">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#LowVoltageElectricalEnergyFlow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#LowVoltageElectricalEnergyFlow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ElectricalEnergyFlow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#MidVoltageElectricalEnergyFlow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#MidVoltageElectricalEnergyFlow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ElectricalEnergyFlow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Object -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Object"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#PhotovoltaicProductionData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#PhotovoltaicProductionData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#GreenEnergyProductionData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#PhotovoltaicSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#PhotovoltaicSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Port -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Port"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ProductionDataFlow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ProductionDataFlow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#DataSignalFlow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#SetControlValveAperture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#SetControlValveAperture">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ControlSignalFlow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#SetTemperature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#SetTemperature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ControlSignalFlow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#SignalFlow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#SignalFlow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Flow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#SmartMeter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#SmartMeter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Solid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Solid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Substance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#StateOfCharge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#StateOfCharge">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#StorageStatusDataFlow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#StatusDataFlow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#StatusDataFlow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#DataSignalFlow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#StorageStatusDataFlow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#StorageStatusDataFlow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#StatusDataFlow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Substance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Substance"/>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#SubstanceFlow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#SubstanceFlow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Flow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#SunraysIncidence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#SunraysIncidence">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#WeatherDataFlow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ThermalEnergyFlow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ThermalEnergyFlow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#EnergyFlow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#WeatherDataFlow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#WeatherDataFlow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#EnvironmentalDataFlow"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Battery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Battery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Battery"/>
+        <untitled-ontology-18:hasFlow rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#LVElectricalEnergy"/>
+        <untitled-ontology-18:hasFlow rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#StateOfCharge"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ControlValveAperture -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ControlValveAperture">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#SetControlValveAperture"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#EHPController -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#EHPController">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#EHPController"/>
+        <untitled-ontology-18:hasFlow rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ControlValveAperture"/>
+        <untitled-ontology-18:hasFlow rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#InternalTemperature"/>
+        <untitled-ontology-18:hasFlow rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#LocalTemperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#EHPElectricalEnergyConsumption -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#EHPElectricalEnergyConsumption">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ElectricHeatPumpConsumptionData"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ElectricHeatPump -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ElectricHeatPump">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ElectricHeatPump"/>
+        <untitled-ontology-18:hasFlow rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ControlValveAperture"/>
+        <untitled-ontology-18:hasFlow rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#EHPElectricalEnergyConsumption"/>
+        <untitled-ontology-18:hasFlow rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#LVElectricalEnergy"/>
+        <untitled-ontology-18:hasFlow rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#LocalTemperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#HHElectricalEnergyLoad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#HHElectricalEnergyLoad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#HouseholdConsumptionData"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#HotAir -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#HotAir">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ConvectionFlow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#HouseHoldBehaviour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#HouseHoldBehaviour">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#HouseHoldBehaviour"/>
+        <untitled-ontology-18:hasFlow rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#HHElectricalEnergyLoad"/>
+        <untitled-ontology-18:hasFlow rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#LVElectricalEnergy"/>
+        <untitled-ontology-18:hasFlow rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#SunraysIncidence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#InternalTemperature -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#InternalTemperature">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#BuildingInternalTemperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#LVElectricalEnergy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#LVElectricalEnergy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#LowVoltageElectricalEnergyFlow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#LocalTemperature -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#LocalTemperature">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#LocalTemperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#LocalWeather -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#LocalWeather">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#LocalWeather"/>
+        <untitled-ontology-18:hasFlow rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#LocalTemperature"/>
+        <untitled-ontology-18:hasFlow rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#SunraysIncidence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#PVElectricalEnergyGeneration -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#PVElectricalEnergyGeneration">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#PhotovoltaicProductionData"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#PhotovoltaicSystem -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#PhotovoltaicSystem">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#PhotovoltaicSystem"/>
+        <untitled-ontology-18:hasFlow rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#LVElectricalEnergy"/>
+        <untitled-ontology-18:hasFlow rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#LocalTemperature"/>
+        <untitled-ontology-18:hasFlow rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#SunraysIncidence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ResidentialBuilding -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#ResidentialBuilding">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Building"/>
+        <untitled-ontology-18:hasFlow rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#HotAir"/>
+        <untitled-ontology-18:hasFlow rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#InternalTemperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#SmartMeter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#SmartMeter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#SmartMeter"/>
+        <untitled-ontology-18:hasFlow rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#EHPElectricalEnergyConsumption"/>
+        <untitled-ontology-18:hasFlow rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#HHElectricalEnergyLoad"/>
+        <untitled-ontology-18:hasFlow rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#PVElectricalEnergyGeneration"/>
+        <untitled-ontology-18:hasFlow rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#StateOfCharge"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#StateOfCharge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#StateOfCharge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#StateOfCharge"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#SunraysIncidence -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#SunraysIncidence">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#SunraysIncidence"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

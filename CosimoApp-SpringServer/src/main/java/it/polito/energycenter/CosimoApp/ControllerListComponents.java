@@ -47,13 +47,12 @@ public class ControllerListComponents {
         System.out.println("GET COMPONENTS REQUEST RECEIVED");
 
         ArrayList<String> returnedValue = new ArrayList<>();
-
       
             // Some queries which cover important basic language constructs of SPARQL-DL
-             String q = "PREFIX cosimo: <http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-13#>\n"
+             String q = "PREFIX cosimo: <http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#>\n"
                     +
                     "SELECT * WHERE {\n" +
-                    "DirectSubClassOf(?x, cosimo:Component)" +
+                    "Type(?x, cosimo:Component)" +
                     "}";
             QueryResult answer = om.doQuery(q);
             String res = answer.toJSON();
@@ -74,8 +73,8 @@ public class ControllerListComponents {
                     returnedValue.add(spf.getShortForm(iri));
                 }
             } 
-            for(String s : returnedValue)
-                System.out.println(s + "\n");
+            /*for(String s : returnedValue)
+                System.out.println(s + "\n");*/
             return returnedValue;
     }
 }

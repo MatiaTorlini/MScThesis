@@ -23,15 +23,14 @@ public class ControllerListFlows {
     @GetMapping(value="/flows/{param}")
     public ArrayList<String> getComponents(@PathVariable("param") String param) throws Exception{
 
-        System.out.println("GET FLOWS REQUEST RECEIVED");
         ArrayList<String> returnedValue = new ArrayList<>();
         
-            String q = "PREFIX cosimo: <http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-13#>\n"
+            String q = "PREFIX cosimo: <http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#>\n"
                     +
                     "SELECT ?x WHERE {\n" +
-                    //"Type(?y,cosimo:" + param + "),\n" +
-                    "Type(?x, cosimo:Flux)" +
-                  //  "SubClassOf(?y, )" +
+                    "Type(?y,cosimo:" + param + "),\n" +
+                    "Type(?x, cosimo:Flow),\n" +
+                    "PropertyValue(?y,cosimo:hasFlow,?x)" +
                     "}";
                     
             QueryResult answer = om.doQuery(q);
@@ -53,10 +52,8 @@ public class ControllerListFlows {
                     returnedValue.add(spf.getShortForm(iri));
                 }
             } 
-            for(String s : returnedValue)
-                System.out.println(s + "\n");
+            /*for(String s : returnedValue)
+                System.out.println(s + "\n");*/
             return returnedValue;
-
-        
     }
 }

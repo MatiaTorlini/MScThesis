@@ -20,7 +20,8 @@ function App() {
     const newPort = {
       name: "Port" + ports.length,
       causality: "I",
-      flow: ""
+      flow: "",
+      valueReference: undefined
     };
     setPorts([...ports, newPort]);
   }
