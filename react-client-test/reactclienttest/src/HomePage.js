@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
 
 function HomePage(props) {
   
 
   return (
-    <div>
       
-      <div className="homepage-content">
+      <Container className="homepage-content">
         <h1>EC-Framework</h1>
         <div className="button-container">
             <Link to="/annotate"> 
@@ -17,8 +17,7 @@ function HomePage(props) {
                 <button className="square-button">Build Scenario</button>
             </Link>
         </div>
-      </div>
-    </div>
+      </Container>
   );
 }
 

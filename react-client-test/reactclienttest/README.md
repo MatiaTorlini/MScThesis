@@ -5,6 +5,11 @@
 
 # Investigate use of JSON-LD 
 
+# PROBLEMS :
+
+# Exceptions handling not done
+# Use of absolute paths
+
 
 
 

@@ -2,9 +2,8 @@
 async function loadComponents() {
     const response = await fetch('http://localhost:8080/components');
     const body = await response.json();
-    console.log(body);
-    if(response.ok) {
-      return body;
+    if (response.ok) {
+        return body;
     }
     else
         throw body;
@@ -22,23 +21,52 @@ async function loadFlows(param) {
 }
 
 function createInterface(rdfinterface) {
-    return new Promise((resolve, reject)=> {
+    const filename = 'modelinterface' + rdfinterface.modelName + '.rdf';
+    return new Promise((resolve, reject) => {
         fetch('http://localhost:8080/newobject', {
             method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body : JSON.stringify({component:rdfinterface.component, ports:rdfinterface.ports, modelName:rdfinterface.modelName})
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ component: rdfinterface.component, ports: rdfinterface.ports, modelName: rdfinterface.modelName }),
+
         }).then((response) => {
             if (response.ok) {
-                resolve(null);
+                response.blob().then((blob) => {
+                    const blobURL = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = blobURL;
+                    a.download = filename;
+                    a.click();
+                    URL.revokeObjectURL(blobURL);
+                    resolve(null);
+                })
             }
             else {
-                response.json().then((obj) => {reject(obj);})
+                response.json().then((obj) => { reject(obj); })
             }
-        }).catch(err => {reject({'error' : 'server error' }) });
+        }).catch(err => { reject({ 'error': 'server error' }) });
     });
 }
 
-const API = {loadComponents, loadFlows, createInterface};
+function createObjectNode(rdfinterfacefile) {
+    return new Promise((resolve, reject) => {
+        fetch("http://localhost:8080/addnode", {
+            method: 'POST',
+            body: rdfinterfacefile,
+        }).then((response) => {
+            if (response.ok) {
+                //response is a json to render the node
+                console.log("response ok");
+                resolve(null);
+            }
+            else {
+                response.json().then((obj) => reject(obj));
+            }
+        }).catch(err => {reject({'error' : 'server error'})})
+    })
+   
+};
+
+
+const API = { loadComponents, loadFlows, createInterface, createObjectNode };
 export default API;
 
-/* /${param} */

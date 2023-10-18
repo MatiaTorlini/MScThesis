@@ -6,6 +6,7 @@ import AnnotationPage from './AnnotationPage';
 import API from './API';
 import HomePage from './HomePage';
 import Navigation from './Navbar';
+import ScenarioBuilder from './ScenarioBuilder';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
   const [interfaceName, setInterfaceName] = useState('');
   const [componentsList, setComponentsList] = useState([]);
   const [ports, setPorts] = useState([]);
+  const [selectedFile, SetSelectedFile] = useState('');
 
   const addPort = () => {
     const newPort = {
@@ -71,6 +73,15 @@ const handleFlowChange = (idx, newflow) => {
     setPorts(tmp);
 }
 
+const addFileInterface = (target) => {
+  //SetSelectedFile(target).then(() => {
+    const formData = new FormData();
+    console.log(formData);
+    formData.append('file', target);
+    API.createObjectNode(formData);
+ // })
+}
+
 const printPorts = () => {
   console.log(ports);
 }
@@ -109,6 +120,7 @@ const printPorts = () => {
             flows={flows} removePort={removePort} addPort={addPort} handleCausalityChange={handleCausalityChange}
             handleFlowChange={handleFlowChange} handleNameChange={handleNameChange} addInterface={addInterface}
             ports={ports}  changeInterfaceName={changeInterfaceName}/>} />
+            <Route path="/compose" element={<ScenarioBuilder addFileInterface={addFileInterface}/>}/>
         </Routes>
       </Router>
     </>
