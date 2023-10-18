@@ -33,10 +33,10 @@ public class ControllerListFlows {
                     "PropertyValue(?y,cosimo:hasFlow,?x)" +
                     "}";
                     
+                    
             QueryResult answer = om.doQuery(q);
             String res = answer.toJSON();
-            
-             SimpleIRIShortFormProvider spf = new SimpleIRIShortFormProvider();
+            SimpleIRIShortFormProvider spf = new SimpleIRIShortFormProvider();
             IRI iri;
             
             ObjectMapper objmap = new ObjectMapper(null, null, null);

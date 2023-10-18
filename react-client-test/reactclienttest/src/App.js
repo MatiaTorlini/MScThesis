@@ -10,18 +10,18 @@ import Navigation from './Navbar';
 
 function App() {
 
-
   const [flows, setFlows] = useState([]);
   const [component, setComponent] = useState('');
+  const [interfaceName, setInterfaceName] = useState('');
   const [componentsList, setComponentsList] = useState([]);
   const [ports, setPorts] = useState([]);
 
   const addPort = () => {
     const newPort = {
-      name: "Port" + ports.length,
-      causality: "I",
-      flow: "",
-      valueReference: undefined
+      name: interfaceName + "Port-" + ports.length ,
+      causality: true,
+      flow: flows[0],
+     // valueReference: undefined
     };
     setPorts([...ports, newPort]);
   }
@@ -33,7 +33,20 @@ function App() {
   }
 
   const setClass = (c) => {
+    setPorts([]);
     setComponent(c)
+  }
+
+  const addInterface = async () => {
+    const RDFInterface = {
+      modelName : interfaceName,
+      component : component,
+      ports : ports
+    };
+    await API.createInterface(RDFInterface);
+    setComponent('');
+    setPorts([]);
+    setInterfaceName('');
   }
 
   const handleNameChange = (idx, newname) => {
@@ -48,6 +61,10 @@ const handleCausalityChange = (idx, newcausality) => {
     setPorts(tmp);
 }
 
+const changeInterfaceName = (target) => {
+  setInterfaceName(target);
+}
+
 const handleFlowChange = (idx, newflow) => {
     const tmp = [...ports];
     tmp[idx].flow = newflow;
@@ -55,9 +72,7 @@ const handleFlowChange = (idx, newflow) => {
 }
 
 const printPorts = () => {
-  for(var p in ports) {
-    console.log("name : " + p.name + " - causality : " + p.causality + " - flow : " + p.flow + "\n");
-  }
+  console.log(ports);
 }
 
 
@@ -79,17 +94,21 @@ const printPorts = () => {
     loadFlows(component);
   }, [component]);
 
+  const post = async () => {
+    await API.createInterface();
+  }
+
   return (
     <>
 
       <Router>
         <Navigation />
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<HomePage post={post}/>} />
           <Route path="/annotate" element={<AnnotationPage componentsList={componentsList} setClass={setClass}
             flows={flows} removePort={removePort} addPort={addPort} handleCausalityChange={handleCausalityChange}
-            handleFlowChange={handleFlowChange} handleNameChange={handleNameChange} printPorts={printPorts}
-            ports={ports}/>} />
+            handleFlowChange={handleFlowChange} handleNameChange={handleNameChange} addInterface={addInterface}
+            ports={ports}  changeInterfaceName={changeInterfaceName}/>} />
         </Routes>
       </Router>
     </>

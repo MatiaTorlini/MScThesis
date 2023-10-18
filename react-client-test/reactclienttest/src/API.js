@@ -21,7 +21,24 @@ async function loadFlows(param) {
         throw body;
 }
 
-const API = {loadComponents, loadFlows};
+function createInterface(rdfinterface) {
+    return new Promise((resolve, reject)=> {
+        fetch('http://localhost:8080/newobject', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body : JSON.stringify({component:rdfinterface.component, ports:rdfinterface.ports, modelName:rdfinterface.modelName})
+        }).then((response) => {
+            if (response.ok) {
+                resolve(null);
+            }
+            else {
+                response.json().then((obj) => {reject(obj);})
+            }
+        }).catch(err => {reject({'error' : 'server error' }) });
+    });
+}
+
+const API = {loadComponents, loadFlows, createInterface};
 export default API;
 
 /* /${param} */

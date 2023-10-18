@@ -6,10 +6,13 @@ function AnnotationPage(props) {
 
     return (
         <>
-            <body>
-                <div class="container">
+            
+                <div className="container">
                     <h2>Component class</h2>
-                    <Row>
+                    <Row> 
+                        <Col>
+                            <input type="text" placeholder="Insert the interface name" onChange={e => props.changeInterfaceName(e.target.value)}></input>
+                        </Col>
                         <Col>
                             <select id="objectClass" onChange={(e) => props.setClass(e.target.value)}>
                                 {props.componentsList.map((str, idx) => (
@@ -17,16 +20,17 @@ function AnnotationPage(props) {
                                 ))
                                 }</select>
                         </Col>
+                        
                     </Row>
                     <Row>
-                        <Col>
+                       <Col>
                             <button className="add-port-button" onClick={props.addPort}>Add Port</button>
                         </Col>
                     </Row>
 
                 </div>
 
-                <div class="container">
+                <div className="container">
                     {props.ports.map((p, idx) => (
                         <>
                             <Row > 
@@ -35,15 +39,15 @@ function AnnotationPage(props) {
                                 </Col>
                                 <Col>
                                     <select onChange={(e) => props.handleCausalityChange(idx, e.target.value)}>
-                                        <option value="I">Input</option>
-                                        <option value="O">Output</option>
+                                        <option value="true">Input</option>
+                                        <option value="false">Output</option>
                                     </select>
                                 </Col>
                                 <Col>
                                     <select onChange={(e) => props.handleFlowChange(idx, e.target.value)}>
                                         {props.flows.map((f) => (
                                             <>
-                                                <option value={f} >{f}</option>
+                                                <option key={f} value={f} >{f}</option>
                                             </>
                                         ))}
                                     </select>
@@ -57,10 +61,9 @@ function AnnotationPage(props) {
                     ))}
                 </div>
 
-                <div class="container">
-                    <button onClick={() => props.printPorts()}>Save Interface</button>
+                <div className="container">
+                    <button onClick={() => props.addInterface()}>Save Interface</button>
                 </div>
-            </body>
         </>
     );
 };
