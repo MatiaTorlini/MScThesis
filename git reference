@@ -1,0 +1,15 @@
+Create repo on Github. then( () => {
+git remote add origin <URL>
+}
+
+In the folder where the code to upload is :
+git init -b main #just once
+git add .
+git commit -m "v1.0"
+git push origin main
+
+
+#### errors : 
+
+ 1 commit your changes or stash them before you can merge -> git reset --hard   /NB looses local changes
+ 2 
