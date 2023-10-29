@@ -1,24 +1,53 @@
-import React from "react";
-import { Button, Container, Row, Col } from "react-bootstrap";
-import 'reactflow/dist/style.css'
+import React, { useCallback, useRef } from 'react';
+import { Button } from 'react-bootstrap';
+import ReactFlow, {
+  MiniMap,
+  Controls,
+  Background,
+  useNodesState,
+  useEdgesState,
+  addEdge,
+  useReactFlow,
+  ReactFlowProvider
+} from 'reactflow';
 
-function ScenarioBuilder(props) {
+
+import 'reactflow/dist/style.css';
 
 
+
+
+
+function ScenarioBuilder(props) {  
+
+        
+    
+    //const onConnect = useCallback((params) => setEdges((eds) => addEdge(params, eds)), [setEdges]);
 
     return <>
-        <Container style={{ width: '100vw', height: '100vh' }}>
-            <Row>
-                <Col>
-                    <input type = "file" onChange={(e) => props.addFileInterface(e.target.files[0])}></input>
-                </Col>
-            </Row>
-
-            <Row>
-                
-            </Row>
-        </Container>
+     <div style={{ width: '100vw', height: '90vh' }}>
+      <ReactFlow
+        nodes={props.nodes}
+        edges={props.edges}
+       // onNodesChange={onNodesChange}
+       // onEdgesChange={onEdgesChange}
+       // onConnect={onConnect}
+        fitView
+      >
+        <Controls />
+        <MiniMap />
+        <Background variant="dots" gap={12} size={1} />
+      </ReactFlow>
+    </div>
     </>
 }
 
-export default ScenarioBuilder;
+function ScenarioBuilderProvider(props) {
+    return (
+        <ReactFlowProvider>
+            <ScenarioBuilder addNode={props.addNode} nodes={props.nodes} models={props.models}/>
+        </ReactFlowProvider>
+    );
+}
+
+export default ScenarioBuilderProvider;

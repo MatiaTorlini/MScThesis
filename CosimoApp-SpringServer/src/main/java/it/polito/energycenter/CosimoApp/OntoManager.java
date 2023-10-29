@@ -1,6 +1,7 @@
 package it.polito.energycenter.CosimoApp;
 
 import java.io.File;
+import java.util.ArrayList;
 
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.IRI;
@@ -21,9 +22,14 @@ import de.derivo.sparqldlapi.QueryResult;
 @Configuration
 public class OntoManager {
    
+   private ArrayList<OWLOntology> models;
    private final QueryEngine engine;
    private final OWLOntology cosimo;
    private final OWLOntologyManager manager; 
+
+   private void loadModels() {
+      String path = "home/vboxuser/Desktop/models/";
+   }
 
    public OntoManager() throws Exception{
     File f = new File("/home/vboxuser/Desktop/proto-cosimo.rdf");
@@ -64,6 +70,10 @@ public class OntoManager {
          OWLObjectProperty hasOutPort = manager.getOWLDataFactory().getOWLObjectProperty("http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#hasOutPort");
          return hasOutPort;
       }
+   }
+
+   public void ReasonTopology() {
+      
    }
 
 }

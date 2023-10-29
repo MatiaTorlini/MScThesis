@@ -8,8 +8,6 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 
 import org.apache.commons.io.IOUtils;
-import org.apache.tomcat.util.file.ConfigurationSource.Resource;
-import org.eclipse.rdf4j.common.io.IOUtil;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.AddImport;
 import org.semanticweb.owlapi.model.IRI;
@@ -21,7 +19,6 @@ import org.semanticweb.owlapi.model.OWLObjectProperty;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.MediaType;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.CrossOrigin;

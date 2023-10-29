@@ -6,8 +6,14 @@ import AnnotationPage from './AnnotationPage';
 import API from './API';
 import HomePage from './HomePage';
 import Navigation from './Navbar';
-import ScenarioBuilder from './ScenarioBuilder';
+import ScenarioBuilderProvider from './ScenarioBuilder';
+import ModelAdder from './ModelAdder';
+import ReactFlow, {
+ 
+  useNodesState,
+  useEdgesState,
 
+} from 'reactflow';
 
 function App() {
 
@@ -18,7 +24,66 @@ function App() {
   const [ports, setPorts] = useState([]);
   const [selectedFile, SetSelectedFile] = useState('');
 
-  const addPort = () => {
+  const models = [
+    {
+        modelName:'testmodel1',
+        modelID:'testid1',
+        ports: 
+        [
+            {
+                name:'testport1',
+                portId:'11',
+                causality:'true',
+            },
+            {
+                name:'testport2',
+                portId:'12',
+                causality:'false'
+            }
+        ]
+    },
+    {
+        modelName:'testmodel2',
+        modelID:'testid2',
+        ports: 
+        [
+            {
+                name:'testport21',
+                portId:'21',
+                causality:'true',
+            }
+        ]
+    }
+  ];
+  var x_pos = 0;
+var y_pos = 0;
+
+const tmp = [];
+ 
+ 
+const [nodes, setNodes, onNodesChange] = useNodesState([]);
+const [edges, setEdges, onEdgesChange] = useEdgesState([]);
+
+
+useEffect(() => {
+    const createNode = (model) => {
+    const node = {
+    id: model.modelID,
+    position: { x: x_pos, y: y_pos },
+    data: { label: model.modelName }
+  }
+  x_pos = x_pos + 200;
+  return node;
+}
+    models.forEach((m) => tmp.push(createNode(m)));
+    console.log("Created tmp")
+    for (let i = 0; i < tmp.length; i++) {
+      console.log(tmp[i]);
+      setNodes(old => [...old, tmp[i]]);
+    }
+  },[])
+
+const addPort = () => {
     const newPort = {
       name: interfaceName + "Port-" + ports.length ,
       causality: true,
@@ -73,7 +138,7 @@ const handleFlowChange = (idx, newflow) => {
     setPorts(tmp);
 }
 
-const addFileInterface = (target) => {
+const addModel = (target) => {
   //SetSelectedFile(target).then(() => {
     const formData = new FormData();
     console.log(formData);
@@ -82,9 +147,7 @@ const addFileInterface = (target) => {
  // })
 }
 
-const printPorts = () => {
-  console.log(ports);
-}
+
 
 
   useEffect(() => {
@@ -120,7 +183,8 @@ const printPorts = () => {
             flows={flows} removePort={removePort} addPort={addPort} handleCausalityChange={handleCausalityChange}
             handleFlowChange={handleFlowChange} handleNameChange={handleNameChange} addInterface={addInterface}
             ports={ports}  changeInterfaceName={changeInterfaceName}/>} />
-            <Route path="/compose" element={<ScenarioBuilder addFileInterface={addFileInterface}/>}/>
+            <Route path="/compose" element={<ScenarioBuilderProvider nodes={nodes} edges={edges} models={models}/>}/>
+            <Route path="/add_model" element={<ModelAdder addModel={addModel}/>}/>
         </Routes>
       </Router>
     </>
