@@ -1,0 +1,21 @@
+#install maven
+
+	sudo apt install maven
+	
+# to create a mvn project, launch 
+	
+mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+	          
+	      
+# to add a dependency, inspect the POM and add dependency taken from mvn repository in the <dependencies> section
+
+<dependency>
+    <groupId>net.sourceforge.owlapi</groupId>
+    <artifactId>owlapi-distribution</artifactId>
+    <version>5.5.0</version>
+</dependency>
+	
+# use first commands of mvn lifecycle build to download all the dependencies
+https://www.tutorialspoint.com/maven/maven_build_life_cycle.htm
+( mvn clean install )
+#edit code and use libraries
