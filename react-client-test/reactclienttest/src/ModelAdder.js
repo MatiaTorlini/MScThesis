@@ -13,7 +13,7 @@ function ModelAdder(props) {
         <Container style={{ width: '100vw', height: '100vh' }}>
             <Row>
                 <Col>
-                    <input type = "file" onChange={(e) => props.addModel(e.target.files[0])}></input>
+                    <input type = "file" accept=".owl, .rdf" onChange={(e) => props.addModel(e.target.files[0])}></input>
                 </Col>
             </Row>
 

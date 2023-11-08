@@ -1,0 +1,112 @@
+"<rdf:Description rdf:about=\"http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18/A\">" +
+      "<rdf:type rdf:resource=\"http://www.w3.org/2003/11/swrl#Variable\"/>" +
+      "</rdf:Description>" +
+      "<rdf:Description rdf:about=\"http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18/B\">" +
+      "<rdf:type rdf:resource=\"http://www.w3.org/2003/11/swrl#Variable\"/>"+
+      "</rdf:Description>"+
+      "<rdf:Description rdf:about=\"http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18/pa\">"+
+      "<rdf:type rdf:resource=\"http://www.w3.org/2003/11/swrl#Variable\"/>"+
+      "</rdf:Description>"+
+      "<rdf:Description rdf:about=\"http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18/pb\">"+
+      "<rdf:type rdf:resource=\"http://www.w3.org/2003/11/swrl#Variable\"/>"+
+      "</rdf:Description>"+
+      "<rdf:Description rdf:about=\"http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18/f\">"+
+      "<rdf:type rdf:resource=\"http://www.w3.org/2003/11/swrl#Variable\"/>"+
+      "</rdf:Description>"+
+      "<rdf:Description>"+
+      "<swrla:isRuleEnabled rdf:datatype=\"http://www.w3.org/2001/XMLSchema#boolean\">true</swrla:isRuleEnabled>"+
+      "<rdfs:comment/>"+
+      "<rdfs:label>rule</rdfs:label>"+
+      "<rdf:type rdf:resource=\"http://www.w3.org/2003/11/swrl#Imp\"/>"+
+      "<swrl:body>"+
+      "<rdf:Description>"+
+      "<rdf:type rdf:resource=\"http://www.w3.org/2003/11/swrl#AtomList\"/>"+
+      "<rdf:first>"+
+      "<rdf:Description>"+
+      "<rdf:type rdf:resource=\"http://www.w3.org/2003/11/swrl#ClassAtom\"/>"+
+      "<swrl:classPredicate rdf:resource=\"http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Object\"/>"+
+      "<swrl:argument1 rdf:resource=\"http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18/A\"/>"+
+      "</rdf:Description>"+
+      "</rdf:first>"+
+      "<rdf:rest>"+
+      "<rdf:Description>"+
+      "<rdf:type rdf:resource=\"http://www.w3.org/2003/11/swrl#AtomList\"/>"+
+      "<rdf:first>"+
+      "<rdf:Description>"+
+      "<rdf:type rdf:resource=\"http://www.w3.org/2003/11/swrl#ClassAtom\"/>"+
+      "<swrl:classPredicate rdf:resource=\"http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#Object\"/>"+
+      "<swrl:argument1 rdf:resource=\"http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18/B\"/>"+
+      "</rdf:Description>"+
+      "</rdf:first>"+
+      "<rdf:rest>"+
+      "<rdf:Description>"+
+      "<rdf:type rdf:resource=\"http://www.w3.org/2003/11/swrl#AtomList\"/>"+
+      "<rdf:first>"+
+      "<rdf:Description>"+
+      "<rdf:type rdf:resource=\"http://www.w3.org/2003/11/swrl#IndividualPropertyAtom\"/>"+
+      "<swrl:propertyPredicate rdf:resource=\"http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#hasPort\"/>"+
+      "<swrl:argument1 rdf:resource=\"http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18/A\"/>"+
+      "<swrl:argument2 rdf:resource=\"http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18/pa\"/>"+
+      "</rdf:Description>"+
+      "</rdf:first>"+
+      "<rdf:rest>"+
+      "<rdf:Description>"+
+      "<rdf:type rdf:resource=\"http://www.w3.org/2003/11/swrl#AtomList\"/>"+
+      "<rdf:first>"+
+      "<rdf:Description>"+
+      "<rdf:type rdf:resource=\"http://www.w3.org/2003/11/swrl#IndividualPropertyAtom\"/>"+
+      "<swrl:propertyPredicate rdf:resource=\"http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#hasPort\"/>"+
+      "<swrl:argument1 rdf:resource=\"http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18/B\"/>"+
+      "<swrl:argument2 rdf:resource=\"http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18/pb\"/>"+
+      "</rdf:Description>"+
+      "</rdf:first>"+
+      "<rdf:rest>"+
+      "<rdf:Description>"+
+      "<rdf:type rdf:resource=\"http://www.w3.org/2003/11/swrl#AtomList\"/>"+
+      "<rdf:first>"+
+      "<rdf:Description>"+
+      "<rdf:type rdf:resource=\"http://www.w3.org/2003/11/swrl#IndividualPropertyAtom\"/>"+
+      "<swrl:propertyPredicate rdf:resource=\"http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#hasOutFlow\"/>"+
+      "<swrl:argument1 rdf:resource=\"http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18/pa\"/>"+
+      "<swrl:argument2 rdf:resource=\"http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18/f\"/>"+
+      "</rdf:Description>"+
+      "</rdf:first>"+
+      "<rdf:rest>"+
+      "<rdf:Description>"+
+      "<rdf:type rdf:resource=\"http://www.w3.org/2003/11/swrl#AtomList\"/>"+
+      "<rdf:first>"+
+      "<rdf:Description>"+
+      "<rdf:type rdf:resource=\"http://www.w3.org/2003/11/swrl#IndividualPropertyAtom\"/>"+
+      "<swrl:propertyPredicate rdf:resource=\"http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#hasInFlow\"/>"+
+      "<swrl:argument1 rdf:resource=\"http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18/pb\"/>"+
+      "<swrl:argument2 rdf:resource=\"http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18/f\"/>"+
+      "</rdf:Description>"+
+      "</rdf:first>"+
+      "<rdf:rest rdf:resource=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#nil\"/>"+
+      "</rdf:Description>"+
+      "</rdf:rest>"+
+      "</rdf:Description>"+
+      "</rdf:rest>"+
+      "</rdf:Description>"+
+      "</rdf:rest>"+
+      "</rdf:Description>"+
+      "</rdf:rest>"+
+      "</rdf:Description>"+
+      "</rdf:rest>"+
+      "</rdf:Description>"+
+      "</swrl:body>"+
+      "<swrl:head>"+
+      "<rdf:Description>"+
+      "<rdf:type rdf:resource=\"http://www.w3.org/2003/11/swrl#AtomList\"/>"+
+      "<rdf:first>"+
+      "<rdf:Description>"+
+      "<rdf:type rdf:resource=\"http://www.w3.org/2003/11/swrl#IndividualPropertyAtom\"/>"+
+      "<swrl:propertyPredicate rdf:resource=\"http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18#compatible\"/>"+
+      "<swrl:argument1 rdf:resource=\"http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18/pa\"/>"+
+      "<swrl:argument2 rdf:resource=\"http://www.semanticweb.org/vboxuser/ontologies/2023/9/untitled-ontology-18/pb\"/>"+
+      "</rdf:Description>"+
+      "</rdf:first>"+
+      "<rdf:rest rdf:resource=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#nil\"/>"+
+      "</rdf:Description>"+
+      "</swrl:head>"+
+      "</rdf:Description>";

@@ -66,7 +66,17 @@ function createObjectNode(rdfinterfacefile) {
    
 };
 
+async function askConnections() {
+    const response = await fetch('http://localhost:8080/reason');
+    const body = await response.json();
+    if (response.ok) {
+        return body;
+    }
+    else
+        throw body;
+}
 
-const API = { loadComponents, loadFlows, createInterface, createObjectNode };
+
+const API = { loadComponents, loadFlows, createInterface, createObjectNode, askConnections };
 export default API;
 

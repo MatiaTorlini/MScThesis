@@ -53,7 +53,7 @@ public class ControllerAddInterface {
         OWLImportsDeclaration importDeclaration = man.getOWLDataFactory().getOWLImportsDeclaration(importedOntology);
         man.applyChange(new AddImport(onto, importDeclaration));
 
-        String componentIRI = IRI.create(onto.getOntologyID().getOntologyIRI().get().toString() + "#") + component;
+        IRI componentIRI = IRI.create(onto.getOntologyID().getOntologyIRI().get().toString() + "#" + component);
         OWLNamedIndividual componentIndividual = man.getOWLDataFactory().getOWLNamedIndividual(componentIRI);
         OWLClass classAssertion = om.getClass(component);
         classAssertion.toString();
